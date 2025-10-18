@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    idade: {
+    age: {
       type: Number,
       required: true,
     },
@@ -29,12 +29,12 @@ const userSchema = new mongoose.Schema(
         required: true,
     },
     requests: {
-        type: String,
+        type: [String],
         required: false,
         default: [],
     },
     contract: {
-        type: String,
+        type: [String],
         required: false,
         default: [],
     }
