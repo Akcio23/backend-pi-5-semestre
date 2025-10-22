@@ -27,7 +27,7 @@ class loginController {
       return res.status(401).json({ message: 'Invalid password' });
     }
 
-    //@ts-ignore
+    // @ts-expect-error user create
     const token = this.generateJwtToken(user);
 
     return res.status(200).json({ message: 'Login successful', token });
