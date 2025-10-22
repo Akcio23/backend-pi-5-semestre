@@ -12,7 +12,7 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix",
-      "prettier --check"
+      "prettier --write"
     ]
   },
   "keywords": [],
@@ -49,7 +49,8 @@
     "lodash": "^4.17.21",
     "mongodb": "^6.20.0",
     "mongoose": "^8.5.2",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "nvm": "^0.0.4"
   },
   "type": "module"
 }
