@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const contractSchema = new mongoose.Schema({
   car_name: {
@@ -31,4 +31,4 @@ const contractSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Contract", contractSchema);
+export default mongoose.model('Contract', contractSchema);
