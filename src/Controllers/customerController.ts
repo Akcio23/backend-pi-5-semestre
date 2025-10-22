@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import User from "../database/models/User.ts";
+import _ from 'lodash';
 
 class CustomerController {
   async updateCustomer(req: Request, res: Response) {
@@ -18,14 +19,14 @@ class CustomerController {
 
     const updateData: { name?: string; email?: string } = {};
 
-    if (name !== undefined) {
+    if ( !_.isEmpty(name)) {
       if (name.trim() === "") {
         return res.status(400).json({ message: "Name cannot be empty" });
       }
       updateData.name = name;
     }
 
-    if (email !== undefined) {
+    if (!_.isEmpty(name)) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (!emailRegex.test(email)) {

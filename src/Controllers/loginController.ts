@@ -2,7 +2,7 @@ import type { Request } from "express";
 import type { Response } from "express";
 import bcrypt from "bcrypt";
 import User from "../database/models/User.ts";
-import type { IUser } from "../interface/IUser.ts";
+import type { IUser } from "../interface/type.ts";
 import jwt from "jsonwebtoken";
 import type { SignOptions } from "jsonwebtoken";
 
